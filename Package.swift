@@ -32,6 +32,9 @@ let package = Package(
         .testTarget(
             name: "SporthAudioKitTests",
             dependencies: ["SporthAudioKit"]),
+        .testTarget(
+            name: "CSporthAudioKitTests",
+            dependencies: ["CSporthAudioKit"])
     ],
     cxxLanguageStandard: .cxx14
 )
