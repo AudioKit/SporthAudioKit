@@ -2,7 +2,7 @@
 
 import AudioKit
 import AVFoundation
-import CAudioKit
+import CAudioKitEX
 
 #if !os(tvOS)
 
