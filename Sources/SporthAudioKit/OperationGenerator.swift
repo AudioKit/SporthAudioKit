@@ -2,7 +2,7 @@
 
 import AudioKit
 import AVFoundation
-import CAudioKit
+import CSporthAudioKit
 
 /// Operation-based generator
 public class OperationGenerator: Node {

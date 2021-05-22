@@ -17,7 +17,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/AudioKit/Soundpipe", .branch("main")),
-        .package(url: "https://github.com/AudioKit/AudioKit", .branch("develop")),
+        .package(url: "https://github.com/AudioKit/SoundpipeAudioKit", .branch("develop")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -25,10 +25,10 @@ let package = Package(
         .target(name: "Sporth", dependencies: ["Soundpipe"]),
         .target(
             name: "SporthAudioKit",
-            dependencies: ["AudioKit", "CSporthAudioKit", "Sporth"]),
+            dependencies: ["SoundpipeAudioKit", "CSporthAudioKit", "Sporth"]),
         .target(
             name: "CSporthAudioKit",
-            dependencies: ["AudioKit", "Sporth"]),
+            dependencies: ["SoundpipeAudioKit", "Sporth"]),
         .testTarget(
             name: "SporthAudioKitTests",
             dependencies: ["SporthAudioKit"]),

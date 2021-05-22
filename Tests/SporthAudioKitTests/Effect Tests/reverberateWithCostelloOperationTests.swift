@@ -2,6 +2,7 @@
 
 import AudioKit
 import SporthAudioKit
+import SoundpipeAudioKit
 import XCTest
 
 class ReverberateWithCostelloTests: XCTestCase {

@@ -2,7 +2,7 @@
 
 import AudioKit
 import AVFoundation
-import CAudioKit
+import CSporthAudioKit
 
 let floatRange = -Float.greatestFiniteMagnitude ... Float.greatestFiniteMagnitude
 

@@ -1,8 +1,7 @@
 // Copyright AudioKit. All Rights Reserved. Revision History at http://github.com/AudioKit/AudioKit/
 
-#ifndef CSporthAudioKit_h
-#define CSporthAudioKit_h
+#pragma once
 
-// CSporthAudioKit has no public interface. It registers DSP kernels automatically.
+#import "SoundpipeDSPBase.h"
 
-#endif /* CSporthAudioKit_h */
+AK_API void akOperationSetSporth(DSPRef dspRef, const char *sporth);
