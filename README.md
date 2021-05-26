@@ -1,4 +1,4 @@
-# SporthAudioKit (AudioKit Operations)
+# AudioKit Operations (Sporth)
 
 [![Build Status](https://github.com/AudioKit/SporthAudioKit/workflows/CI/badge.svg)](https://github.com/AudioKit/SporthAudioKit/actions?query=workflow%3ACI)
 [![License](https://img.shields.io/github/license/AudioKit/SporthAudioKit)](https://github.com/AudioKit/SporthAudioKit/blob/main/LICENSE)
