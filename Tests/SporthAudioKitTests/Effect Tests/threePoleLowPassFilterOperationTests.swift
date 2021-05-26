@@ -1,6 +1,7 @@
-// Copyright AudioKit. All Rights Reserved. Revision History at http://github.com/AudioKit/AudioKit/
+// Copyright AudioKit. All Rights Reserved.
 
 import AudioKit
+import SoundpipeAudioKit
 import SporthAudioKit
 import XCTest
 

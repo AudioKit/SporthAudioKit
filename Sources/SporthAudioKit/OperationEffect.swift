@@ -1,8 +1,9 @@
-// Copyright AudioKit. All Rights Reserved. Revision History at http://github.com/AudioKit/AudioKit/
+// Copyright AudioKit. All Rights Reserved.
 
 import AudioKit
+import AudioKitEX
 import AVFoundation
-import CAudioKit
+import CSporthAudioKit
 
 let floatRange = -Float.greatestFiniteMagnitude ... Float.greatestFiniteMagnitude
 

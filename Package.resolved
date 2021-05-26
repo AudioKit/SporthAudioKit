@@ -6,16 +6,25 @@
         "repositoryURL": "https://github.com/AudioKit/AudioKit",
         "state": {
           "branch": "develop",
-          "revision": "9d97a87b445a4f222f3af278ac3410c12408ed62",
+          "revision": "fc70381cebdf13015038bd35a1d282f9b22e710d",
           "version": null
         }
       },
       {
-        "package": "Soundpipe",
-        "repositoryURL": "https://github.com/AudioKit/Soundpipe",
+        "package": "KissFFT",
+        "repositoryURL": "https://github.com/AudioKit/KissFFT",
         "state": {
           "branch": "main",
-          "revision": "e4cd02e5e6ef452284c885be9cae91396d596d2e",
+          "revision": "949c9e023f7ed29418d8cd686d0632bf206dc136",
+          "version": null
+        }
+      },
+      {
+        "package": "SoundpipeAudioKit",
+        "repositoryURL": "https://github.com/AudioKit/SoundpipeAudioKit",
+        "state": {
+          "branch": "develop",
+          "revision": "8460b4c4bc7ec923ed418bfcba0e5bcb53f319b4",
           "version": null
         }
       }

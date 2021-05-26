@@ -1,4 +1,4 @@
-// Copyright AudioKit. All Rights Reserved. Revision History at http://github.com/AudioKit/AudioKit/
+// Copyright AudioKit. All Rights Reserved.
 
 /// OperationParameters are simply arguments that can be passed into ComputedParameters
 /// These could be numbers (floats, doubles, ints) or other operations themselves
