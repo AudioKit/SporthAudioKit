@@ -1,20 +1,16 @@
 # SporthAudioKit (AudioKit Operations)
 
-This extension to AudioKit allows for complex, interconnect DSP. See the AudioKit Cookbook for examples.
+This extension to AudioKit allows for complex, interconnected DSP. 
 
-## Sporth
+## Documentation
 
-Sporth (short for SoundPipe fORTH), is a small stack-based musical language, roughly
-inspired by stack languages like Forth and PostScript.
+The Githbub [Wiki](https://github.com/AudioKit/SporthAudioKit/wiki) hosts the documentation for this project.
 
-## Features
+## Examples
 
-- Stack oriented paradigm
-- Written entirely in C
-- 100+ unit generators to choose from
-- Powered by the Soundpipe DSP library
-- Unix-Friendly
-- Small codebase
-- Powerful C API
-- Easily extendable
-- Easily embeddable
+See the [AudioKit Cookbook](https://github.com/AudioKit/Cookbook/) for examples.
+
+## Installation
+
+Point your Swift Package Manager to this URL.
+
