@@ -1,5 +1,5 @@
 #include "Soundpipe.h"
-#include "sporth.h"
+#include "Sporth.h"
 #include "ugens.h"
 
 #ifdef __cplusplus

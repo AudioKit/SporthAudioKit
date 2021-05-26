@@ -2,7 +2,7 @@
 #import <XCTest/XCTest.h>
 #import <CAudioKit.h>
 #import <Soundpipe.h>
-#import <sporth.h>
+#import <Sporth.h>
 #import <plumber.h>
 
 @interface SoundpipePerfTests : XCTestCase
