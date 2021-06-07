@@ -5,35 +5,15 @@ import PackageDescription
 
 let package = Package(
     name: "SporthAudioKit",
-    platforms: [
-        .macOS(.v10_14), .iOS(.v13), .tvOS(.v13)
-    ],
-    products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "SporthAudioKit",
-            targets: ["SporthAudioKit"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/AudioKit/SoundpipeAudioKit", .branch("develop")),
-    ],
+    platforms: [.macOS(.v10_14), .iOS(.v13), .tvOS(.v13)],
+    products: [.library(name: "SporthAudioKit", targets: ["SporthAudioKit"])],
+    dependencies: [.package(url: "https://github.com/AudioKit/SoundpipeAudioKit", from: "5.2.0")],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(name: "Sporth", dependencies: ["SoundpipeAudioKit"]),
-        .target(
-            name: "SporthAudioKit",
-            dependencies: ["SoundpipeAudioKit", "CSporthAudioKit", "Sporth"]),
-        .target(
-            name: "CSporthAudioKit",
-            dependencies: ["SoundpipeAudioKit", "Sporth"]),
-        .testTarget(
-            name: "SporthAudioKitTests",
-            dependencies: ["SporthAudioKit"]),
-        .testTarget(
-            name: "CSporthAudioKitTests",
-            dependencies: ["CSporthAudioKit"])
+        .target(name: "SporthAudioKit", dependencies: ["SoundpipeAudioKit", "CSporthAudioKit", "Sporth"]),
+        .target(name: "CSporthAudioKit", dependencies: ["SoundpipeAudioKit", "Sporth"]),
+        .testTarget(name: "SporthAudioKitTests", dependencies: ["SporthAudioKit"]),
+        .testTarget(name: "CSporthAudioKitTests", dependencies: ["CSporthAudioKit"])
     ],
     cxxLanguageStandard: .cxx14
 )
