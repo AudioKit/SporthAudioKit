@@ -1,5 +1,6 @@
 // Copyright AudioKit. All Rights Reserved.
 
+#include "CSporthAudioKit.h"
 #include "SoundpipeDSPBase.h"
 #include "ParameterRamper.h"
 #include "Soundpipe.h"
