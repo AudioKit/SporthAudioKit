@@ -1,5 +1,6 @@
 // Copyright AudioKit. All Rights Reserved.
 
+#include "CSporthAudioKit.h"
 #include "SoundpipeDSPBase.h"
 #include "ParameterRamper.h"
 #include "Soundpipe.h"
@@ -104,7 +105,7 @@ public:
     }
 };
 
-AK_API void akOperationSetSporth(DSPRef dspRef, const char *sporth) {
+void akOperationSetSporth(DSPRef dspRef, const char *sporth) {
     auto dsp = dynamic_cast<OperationDSP *>(dspRef);
     assert(dsp);
     dsp->setSporth(sporth);

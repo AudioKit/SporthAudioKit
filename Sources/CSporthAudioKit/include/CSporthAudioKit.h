@@ -4,4 +4,6 @@
 
 #import "SoundpipeDSPBase.h"
 
-AK_API void akOperationSetSporth(DSPRef dspRef, const char *sporth);
+CF_EXTERN_C_BEGIN
+void akOperationSetSporth(DSPRef dspRef, const char *sporth);
+CF_EXTERN_C_END
