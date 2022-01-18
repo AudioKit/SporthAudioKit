@@ -32,9 +32,9 @@
         "package": "SoundpipeAudioKit",
         "repositoryURL": "https://github.com/AudioKit/SoundpipeAudioKit",
         "state": {
-          "branch": "develop",
-          "revision": "5c963f21a1161ad0fc17225d064c065fd530c823",
-          "version": null
+          "branch": null,
+          "revision": "73b438e5c094d0535e48e305c37a6b77190510e3",
+          "version": "5.3.1"
         }
       }
     ]
