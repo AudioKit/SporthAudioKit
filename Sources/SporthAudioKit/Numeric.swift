@@ -2,7 +2,7 @@
 
 // MARK: Numeric Protocol
 
-/// Very simple protoocol for anything with an instrinsic floating point value.
+/// Very simple protocol for anything with an intrinsic floating point value.
 /// Allows constants to be passed into an AudioKit operation as well as other operations.
 public protocol Numeric: OperationParameter {
     /// Raw value of the numeric parameter

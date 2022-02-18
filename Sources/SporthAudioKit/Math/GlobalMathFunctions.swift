@@ -132,7 +132,7 @@ public func log(_ operation: Operation) -> Operation {
 
 /// Performs Base 10 logarithm on the operation
 ///
-/// - parmeter operation: ComputedParameter to operate on
+/// - parameter operation: ComputedParameter to operate on
 ///
 public func log10(_ operation: Operation) -> Operation {
     return operation.log10()
