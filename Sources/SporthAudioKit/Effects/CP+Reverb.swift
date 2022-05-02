@@ -2,7 +2,7 @@
 
 extension ComputedParameter {
 
-    /// This is was built using the JC reverb implentation found in FAUST. According
+    /// This is was built using the JC reverb implementation found in FAUST. According
     /// to the source code, the specifications for this implementation were found on
     /// an old SAIL DART backup tape.
     /// This class is derived from the CLM JCRev function, which is based on the use

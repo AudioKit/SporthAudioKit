@@ -29,12 +29,12 @@ You can AudioKit and any of the other AudioKit libraries using Collections
 | Name            | Description                                 | Language      |
 |-----------------|---------------------------------------------|---------------|
 | SporthAudioKit  | API for creating Sporth-powered Audio Units | Swift         |
-| CSporthAudioKit | Audio Unit for Opoeration DSP               | Objective-C++ |
+| CSporthAudioKit | Audio Unit for Operation DSP                | Objective-C++ |
 | Sporth          | Stack-based DSP language                    | C             |
 
 ## Documentation
 
-The Githbub [Wiki](https://github.com/AudioKit/SporthAudioKit/wiki) hosts the documentation for this project.
+The Github [Wiki](https://github.com/AudioKit/SporthAudioKit/wiki) hosts the documentation for this project.
 
 ## Examples
 

@@ -18,7 +18,7 @@
 static const SPFLOAT toint = 1/EPS;
 
 /*
- * this roundf fuction is needed when compiling with -ansi flag
+ * this roundf function is needed when compiling with -ansi flag
  * the code for this is from the musl libc library
  */
 static SPFLOAT sproundf(SPFLOAT x)
