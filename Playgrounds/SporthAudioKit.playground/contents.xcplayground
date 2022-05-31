@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos' display-mode='raw' buildActiveScheme='true' executeOnSourceChanges='true' importAppTypes='true'>
+    <pages>
+        <page name='Hello World'/>
+        <page name='FM Oscillator Operation'/>
+        <page name='Noise Operations'/>
+        <page name='Phasor Operation'/>
+        <page name='Sawtooth Wave Oscillator Operation'/>
+        <page name='Vocal Tract Operation'/>
+    </pages>
+</playground>
