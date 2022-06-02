@@ -1,4 +1,7 @@
-//: A simple playground to test SporthAudioKit makes sounds
+//: ## Pedestrians
+//: A British crossing signal implemented with AudioKit, an example from
+//: Andy Farnell's excellent book "Designing Sound"
+//:
 import AudioKit
 import SporthAudioKit
 import PlaygroundSupport
