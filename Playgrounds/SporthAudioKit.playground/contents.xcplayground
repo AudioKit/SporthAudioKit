@@ -5,6 +5,7 @@
         <page name='FM Oscillator Operation'/>
         <page name='Noise Operations'/>
         <page name='Phasor Operation'/>
+        <page name='Plucked String Operation'/>
         <page name='Sawtooth Wave Oscillator Operation'/>
         <page name='Vocal Tract Operation'/>
     </pages>

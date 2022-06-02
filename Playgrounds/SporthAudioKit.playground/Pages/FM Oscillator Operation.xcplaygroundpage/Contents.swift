@@ -30,7 +30,7 @@ let delay2 = Delay(delay1, time: 0.1, feedback: 0.1, lowPassCutoff: 0, dryWetMix
 let reverb = Reverb(delay2, dryWetMix: 0.5)
 
 let engine = AudioEngine()
-engine.output = generator
+engine.output = reverb
 
 try! engine.start()
 generator.start()
