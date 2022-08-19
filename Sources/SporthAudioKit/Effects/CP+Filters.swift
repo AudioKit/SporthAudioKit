@@ -1,14 +1,13 @@
 // Copyright AudioKit. All Rights Reserved.
 
-extension ComputedParameter {
-
+public extension ComputedParameter {
     /// An automatic wah effect, ported from Guitarix via Faust.
     ///
     /// - Parameters:
     ///   - wah: Wah Amount (Default: 0, Minimum: 0, Maximum: 1)
     ///   - amplitude: Overall level (Default: 0.1, Minimum: 0, Maximum: 1)
     ///
-    public func autoWah(wah: OperationParameter = 0, amplitude: OperationParameter = 0.1) -> Operation {
+    func autoWah(wah: OperationParameter = 0, amplitude: OperationParameter = 0.1) -> Operation {
         return Operation(module: "100 autowah", inputs: toMono(), amplitude, wah)
     }
 
@@ -17,7 +16,7 @@ extension ComputedParameter {
     ///
     /// - parameter input: Input audio signal
     ///
-    public func dcBlock() -> Operation {
+    func dcBlock() -> Operation {
         return Operation(module: "dcblk", inputs: toMono())
     }
 
@@ -26,7 +25,7 @@ extension ComputedParameter {
     ///
     /// - parameter cutoffFrequency: Cutoff frequency. (in Hertz) (Default: 500, Minimum: 12.0, Maximum: 20000.0)
     ///
-    public func highPassButterworthFilter(cutoffFrequency: OperationParameter = 500) -> Operation {
+    func highPassButterworthFilter(cutoffFrequency: OperationParameter = 500) -> Operation {
         return Operation(module: "buthp", inputs: toMono(), cutoffFrequency)
     }
 
@@ -35,7 +34,7 @@ extension ComputedParameter {
     /// - parameter halfPowerPoint: Half-Power Point in Hertz. Half power is defined as peak power / square root of 2.
     ///                             (Default: 1000, Minimum: 12.0, Maximum: 20000.0)
     ///
-    public func highPassFilter(halfPowerPoint: OperationParameter = 1_000) -> Operation {
+    func highPassFilter(halfPowerPoint: OperationParameter = 1000) -> Operation {
         return Operation(module: "atone", inputs: toMono(), halfPowerPoint)
     }
 
@@ -47,11 +46,12 @@ extension ComputedParameter {
     /// - parameter resonance: Filter resonance (should be between 0-2) (Default: 1.0, Minimum: 0.0, Maximum: 2.0)
     /// - parameter saturation: Filter saturation. (Default: 0.0, Minimum: 0.0, Maximum: 10.0)
     ///
-    public func korgLowPassFilter(cutoffFrequency: OperationParameter = 1_000.0,
-                                  resonance: OperationParameter = 1.0,
-                                  saturation: OperationParameter = 0.0) -> Operation {
+    func korgLowPassFilter(cutoffFrequency: OperationParameter = 1000.0,
+                           resonance: OperationParameter = 1.0,
+                           saturation: OperationParameter = 0.0) -> Operation
+    {
         return Operation(module: "wpkorg35",
-                           inputs: toMono(), cutoffFrequency, resonance, saturation)
+                         inputs: toMono(), cutoffFrequency, resonance, saturation)
     }
 
     /// These filters are Butterworth second-order IIR filters. They offer an almost
@@ -59,7 +59,7 @@ extension ComputedParameter {
     ///
     /// - parameter cutoffFrequency: Cutoff frequency. (in Hertz) (Default: 1000, Minimum: 12.0, Maximum: 20000.0)
     ///
-    public func lowPassButterworthFilter(cutoffFrequency: OperationParameter = 1_000) -> Operation {
+    func lowPassButterworthFilter(cutoffFrequency: OperationParameter = 1000) -> Operation {
         return Operation(module: "butlp", inputs: toMono(), cutoffFrequency)
     }
 
@@ -68,7 +68,7 @@ extension ComputedParameter {
     /// - parameter halfPowerPoint: The response curve's half-power point, in Hertz. Half power is defined as
     ///                             peak power / root 2. (Default: 1000, Minimum: 12.0, Maximum: 20000.0)
     ///
-    public func lowPassFilter(halfPowerPoint: OperationParameter = 1_000) -> Operation {
+    func lowPassFilter(halfPowerPoint: OperationParameter = 1000) -> Operation {
         return Operation(module: "tone", inputs: toMono(), halfPowerPoint)
     }
 
@@ -81,8 +81,9 @@ extension ComputedParameter {
     ///   - qualityFactor: Quality factor of the filter. Roughly equal to Q/frequency.
     ///                    (Default: 50.0, Minimum: 0.0, Maximum: 100.0)
     ///
-    public func modalResonanceFilter(frequency: OperationParameter = 500.0,
-                                     qualityFactor: OperationParameter = 50.0) -> Operation {
+    func modalResonanceFilter(frequency: OperationParameter = 500.0,
+                              qualityFactor: OperationParameter = 50.0) -> Operation
+    {
         return Operation(module: "mode", inputs: toMono(), frequency, qualityFactor)
     }
 
@@ -98,10 +99,11 @@ extension ComputedParameter {
     ///                aliasing, analogue synths generally allow resonances to be above 1.
     ///                (Default: 0.5, Minimum: 0.0, Maximum: 2.0)
     ///
-    public func moogLadderFilter(cutoffFrequency: OperationParameter = 1_000,
-                                 resonance: OperationParameter = 0.5) -> Operation {
+    func moogLadderFilter(cutoffFrequency: OperationParameter = 1000,
+                          resonance: OperationParameter = 0.5) -> Operation
+    {
         return Operation(module: "moogladder",
-                           inputs: toMono(), cutoffFrequency, resonance)
+                         inputs: toMono(), cutoffFrequency, resonance)
     }
 
     /// A second-order resonant filter.
@@ -112,11 +114,11 @@ extension ComputedParameter {
     ///   - bandwidth: The bandwidth of the filter (the Hz difference between the upper and lower half-power points
     ///                (defaults to 1000 Hz).
     ///
-    public func resonantFilter(frequency: OperationParameter = 4_000.0,
-                               bandwidth: OperationParameter = 1_000.0) -> Operation {
+    func resonantFilter(frequency: OperationParameter = 4000.0,
+                        bandwidth: OperationParameter = 1000.0) -> Operation
+    {
         return Operation(module: "reson", inputs: toMono(), frequency, bandwidth)
     }
-
 
     /// A modal resonance filter used for modal synthesis. Plucked and bell sounds
     /// can be created using  passing an impulse through a combination of modal
@@ -128,8 +130,9 @@ extension ComputedParameter {
     ///               Small values may leave the input signal unaffected. Depending on the filter frequency,
     ///               typical values are > .9.  Default 0.95
     ///
-    public func stringResonator(frequency: OperationParameter = 100.0,
-                                feedback: OperationParameter = 0.95) -> Operation {
+    func stringResonator(frequency: OperationParameter = 100.0,
+                         feedback: OperationParameter = 0.95) -> Operation
+    {
         return Operation(module: "streson", inputs: toMono(), frequency, feedback)
     }
 
@@ -145,9 +148,10 @@ extension ComputedParameter {
     ///                frequency. Values slightly greater than 1 are possible for more sustained oscillation and an
     ///                “overdrive” effect. (Default: 0.5, Minimum: 0.0, Maximum: 2.0)
     ///
-    public func threePoleLowPassFilter(distortion: OperationParameter = 0.5,
-                                       cutoffFrequency: OperationParameter = 1_500,
-                                       resonance: OperationParameter = 0.5) -> Operation {
+    func threePoleLowPassFilter(distortion: OperationParameter = 0.5,
+                                cutoffFrequency: OperationParameter = 1500,
+                                resonance: OperationParameter = 0.5) -> Operation
+    {
         return Operation(module: "lpf18", inputs: toMono(), distortion, cutoffFrequency, resonance)
     }
 }

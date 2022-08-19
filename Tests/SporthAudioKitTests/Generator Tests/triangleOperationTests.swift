@@ -5,7 +5,6 @@ import SporthAudioKit
 import XCTest
 
 class TriangleTests: XCTestCase {
-
     func testParameterSweep() {
         let engine = AudioEngine()
         let triangle = OperationGenerator {
@@ -13,8 +12,9 @@ class TriangleTests: XCTestCase {
                 trigger: Operation.metronome(),
                 start: 1.0,
                 end: 0.0,
-                duration: 1.0)
-            return Operation.triangle(frequency: ramp * 2_000, amplitude: ramp, phase: ramp)
+                duration: 1.0
+            )
+            return Operation.triangle(frequency: ramp * 2000, amplitude: ramp, phase: ramp)
         }
         engine.output = triangle
         triangle.play()
@@ -22,5 +22,4 @@ class TriangleTests: XCTestCase {
         audio.append(engine.render(duration: 1.0))
         testMD5(audio)
     }
-
 }

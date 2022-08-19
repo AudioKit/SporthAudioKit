@@ -1,7 +1,6 @@
 // Copyright AudioKit. All Rights Reserved.
 
-extension ComputedParameter {
-
+public extension ComputedParameter {
     /// This will digitally degrade a signal.
     ///
     /// - Parameters:
@@ -9,20 +8,21 @@ extension ComputedParameter {
     ///               Non-integer values are OK. (Default: 8, Minimum: 1, Maximum: 24)
     ///   - sampleRate: The sample rate of signal output. (Default: 10000, Minimum: 0.0, Maximum: 20000.0)
     ///
-    public func bitCrush(bitDepth: OperationParameter = 8,
-                         sampleRate: OperationParameter = 10_000) -> Operation {
+    func bitCrush(bitDepth: OperationParameter = 8,
+                  sampleRate: OperationParameter = 10000) -> Operation
+    {
         return Operation(module: "bitcrush",
                          inputs: toMono(), bitDepth, sampleRate)
     }
-    
+
     /// Clips a signal to a predefined limit, in a "soft" manner.
     ///
     /// - parameter limit: Threshold / limiting value. (Default: 1.0, Minimum: 0.0, Maximum: 1.0)
     ///
-    public func clip(_ limit: OperationParameter = 1.0) -> Operation {
+    func clip(_ limit: OperationParameter = 1.0) -> Operation {
         return Operation(module: "clip", inputs: toMono(), limit)
     }
-    
+
     /// Distortion using a modified hyperbolic tangent function.
     ///
     /// - Parameters:
@@ -34,10 +34,11 @@ extension ComputedParameter {
     ///   - negativeShapeParameter: Like the positive shape parameter, only for the negative part.
     ///                             (Default: 0.0, Minimum: -10.0, Maximum: 10.0)
     ///
-    public func distort(pregain: OperationParameter = 2.0,
-                        postgain: OperationParameter = 0.5,
-                        positiveShapeParameter: OperationParameter = 0.0,
-                        negativeShapeParameter: OperationParameter = 0.0) -> Operation {
+    func distort(pregain: OperationParameter = 2.0,
+                 postgain: OperationParameter = 0.5,
+                 positiveShapeParameter: OperationParameter = 0.0,
+                 negativeShapeParameter: OperationParameter = 0.0) -> Operation
+    {
         return Operation(module: "dist",
                          inputs: toMono(), pregain, postgain, positiveShapeParameter, negativeShapeParameter)
     }

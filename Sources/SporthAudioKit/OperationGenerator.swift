@@ -7,10 +7,9 @@ import CSporthAudioKit
 
 /// Operation-based generator
 public class OperationGenerator: Node {
-
     /// Connected nodes
     public var connections: [Node] { [] }
-    
+
     /// Underlying AVAudioNode
     public var avAudioNode: AVAudioNode
 
@@ -22,8 +21,10 @@ public class OperationGenerator: Node {
             defaultValue: 0,
             range: floatRange,
             unit: .generic,
-            flags: .default)
+            flags: .default
+        )
     }
+
     /// Specification for Parameter 1
     public static let parameter1Def = OperationGenerator.makeParam(1)
     /// Specification for Parameter 2
@@ -89,7 +90,6 @@ public class OperationGenerator: Node {
     /// - parameter operation: Operation to generate, can be mono or stereo
     ///
     public convenience init(operation: ([Operation]) -> ComputedParameter) {
-
         let computedParameter = operation(Operation.parameters)
 
         if type(of: computedParameter) == Operation.self {
@@ -122,7 +122,6 @@ public class OperationGenerator: Node {
     ///   - operations: Array of operations [left, right]
     ///
     public convenience init(channelCount: Int, operations: ([Operation]) -> [Operation]) {
-
         let computedParameters = operations(Operation.parameters)
         let left = computedParameters[0]
 
@@ -139,10 +138,9 @@ public class OperationGenerator: Node {
     /// - parameter sporth: String of valid Sporth code
     ///
     public init(sporth: String = "") {
-
         avAudioNode = instantiate(instrument: "cstg")
         setupParameters()
-        
+
         akOperationSetSporth(au.dsp, sporth)
     }
 
@@ -150,5 +148,4 @@ public class OperationGenerator: Node {
     open func trigger() {
         au.trigger()
     }
-
 }

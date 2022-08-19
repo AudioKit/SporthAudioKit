@@ -4,7 +4,7 @@ import XCTest
 extension XCTestCase {
     func testMD5(_ buffer: AVAudioPCMBuffer) {
         let localMD5 = buffer.md5
-        let name = self.description
+        let name = description
         XCTAssert(validatedMD5s[name] == buffer.md5, "\nFAILEDMD5 \"\(name)\": \"\(localMD5)\",")
     }
 }
@@ -37,5 +37,4 @@ let validatedMD5s: [String: String] = [
     "-[VocalTractOperationTests testParameterSweep]": "e846c8d1a61587825d0c699d162e3cd0",
     "-[WhiteNoiseOperationTests testAmplitude]": "1fdb585751ad480ad39f16cae4589cf7",
     "-[WhiteNoiseOperationTests testParameterSweep]": "f8bf5004f0d3c528b491a65c7db78865",
-
 ]

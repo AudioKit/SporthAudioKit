@@ -1,8 +1,8 @@
 //: ## Noise Operations
 //:
 import AudioKit
-import SporthAudioKit
 import PlaygroundSupport
+import SporthAudioKit
 
 let generator = OperationGenerator { _ in
     let white = Operation.whiteNoise()

@@ -1,12 +1,11 @@
 // Copyright AudioKit. All Rights Reserved.
 
 import AudioKit
-import SporthAudioKit
 import SoundpipeAudioKit
+import SporthAudioKit
 import XCTest
 
 class ReverberateWithCostelloTests: XCTestCase {
-
     func testDefault() {
         let engine = AudioEngine()
         let input = Oscillator(waveform: Table(.triangle))
@@ -16,5 +15,4 @@ class ReverberateWithCostelloTests: XCTestCase {
         audio.append(engine.render(duration: 1.0))
         testMD5(audio)
     }
-
 }

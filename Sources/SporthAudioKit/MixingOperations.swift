@@ -1,6 +1,5 @@
 // Copyright AudioKit. All Rights Reserved.
 
-
 /// Mix together two parameters
 ///
 /// - Parameters:
@@ -12,8 +11,7 @@ public func mixer(_ first: OperationParameter, _ second: OperationParameter, bal
     return Operation(module: "1 swap - cf", inputs: first, second, balance)
 }
 
-extension ComputedParameter {
-
+public extension ComputedParameter {
     /// Panner
     ///
     /// - Parameters:
@@ -21,7 +19,7 @@ extension ComputedParameter {
     ///   - pan: Panning. A value of -1 is hard left, and a value of 1 is hard right, and 0 is center.
     ///          (Default: 0, Minimum: -1, Maximum: 1)
     ///
-    public func pan(_ pan: OperationParameter = 0) -> StereoOperation {
+    func pan(_ pan: OperationParameter = 0) -> StereoOperation {
         return StereoOperation(module: "pan", inputs: toMono(), pan)
     }
 
@@ -32,7 +30,7 @@ extension ComputedParameter {
     ///   - pan: Panning. A value of -1 is hard left, and a value of 1 is hard right, and 0 is center.
     ///          (Default: 0, Minimum: -1, Maximum: 1)
     ///
-    public func stereoPan(_ pan: OperationParameter = 0) -> StereoOperation {
+    func stereoPan(_ pan: OperationParameter = 0) -> StereoOperation {
         return StereoOperation(module: "panst", inputs: toStereo(), pan)
     }
 }

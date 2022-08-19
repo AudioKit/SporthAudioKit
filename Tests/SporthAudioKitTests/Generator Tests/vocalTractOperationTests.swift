@@ -5,7 +5,6 @@ import SporthAudioKit
 import XCTest
 
 class VocalTractOperationTests: XCTestCase {
-
     func testParameterSweep() {
         let engine = AudioEngine()
         let vocalTract = OperationGenerator {
@@ -13,12 +12,13 @@ class VocalTractOperationTests: XCTestCase {
                 trigger: Operation.metronome(),
                 start: 0,
                 end: 1,
-                duration: 1.0)
+                duration: 1.0
+            )
             return Operation.vocalTract(frequency: 200 + 200 * line,
-                                          tonguePosition: line,
-                                          tongueDiameter: line,
-                                          tenseness: line,
-                                          nasality: line)
+                                        tonguePosition: line,
+                                        tongueDiameter: line,
+                                        tenseness: line,
+                                        nasality: line)
         }
         engine.output = vocalTract
         vocalTract.start()
@@ -26,5 +26,4 @@ class VocalTractOperationTests: XCTestCase {
         audio.append(engine.render(duration: 1.0))
         testMD5(audio)
     }
-
 }

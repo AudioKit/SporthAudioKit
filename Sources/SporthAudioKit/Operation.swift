@@ -6,7 +6,6 @@ public protocol ComputedParameter: OperationParameter {}
 
 /// An Operation is a computed parameter that can be passed to other operations in the same operation node
 open class Operation: ComputedParameter {
-
     // MARK: - Dependency Management
 
     fileprivate var inputs = [OperationParameter]()
@@ -55,10 +54,10 @@ open class Operation: ComputedParameter {
                     }
                 }
             } else {
-                opString  += "\(input) "
+                opString += "\(input) "
             }
         }
-        opString  += "\(module) "
+        opString += "\(module) "
         return opString
     }
 
@@ -171,11 +170,11 @@ open class Operation: ComputedParameter {
     /// - parameter value: Constant value as an operation
     ///
     public init(_ value: Double) {
-        self.valueText = "\(value)"
+        valueText = "\(value)"
     }
 
     init(global: String) {
-        self.valueText = global
+        valueText = global
     }
 
     /// Initialize the operation with a Sporth string
@@ -183,10 +182,10 @@ open class Operation: ComputedParameter {
     /// - parameter operationString: Valid Sporth string (proceed with caution
     ///
     public init(_ operationString: String) {
-        self.valueText = operationString
-        //self.tableIndex = -1 //Operation.nextTableIndex
-        //Operation.nextTableIndex += 1
-        //Operation.operationArray.append(self)
+        valueText = operationString
+        // self.tableIndex = -1 //Operation.nextTableIndex
+        // Operation.nextTableIndex += 1
+        // Operation.operationArray.append(self)
     }
 
     /// Initialize the operation
@@ -197,7 +196,7 @@ open class Operation: ComputedParameter {
     ///
     public init(module: String, setup: String = "", inputs: OperationParameter...) {
         self.module = module
-        self.setupSporth = setup
+        setupSporth = setup
         self.inputs = inputs
 
         for input in inputs {

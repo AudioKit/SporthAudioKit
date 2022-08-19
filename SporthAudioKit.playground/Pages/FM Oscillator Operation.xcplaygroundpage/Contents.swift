@@ -1,8 +1,8 @@
 //: ## FM Oscillator Operation
 //:
 import AudioKit
-import SporthAudioKit
 import PlaygroundSupport
+import SporthAudioKit
 
 let generator = OperationGenerator { _ in
 
@@ -17,10 +17,10 @@ let generator = OperationGenerator { _ in
     let index = square2 * 3 + 5
 
     let oscillator = Operation.fmOscillator(baseFrequency: freq,
-                                              carrierMultiplier: car,
-                                              modulatingMultiplier: mod,
-                                              modulationIndex: index,
-                                              amplitude: 0.5)
+                                            carrierMultiplier: car,
+                                            modulatingMultiplier: mod,
+                                            modulationIndex: index,
+                                            amplitude: 0.5)
 
     return oscillator.pan(sine)
 }
@@ -36,5 +36,3 @@ try! engine.start()
 generator.start()
 
 PlaygroundPage.current.needsIndefiniteExecution = true
-
-

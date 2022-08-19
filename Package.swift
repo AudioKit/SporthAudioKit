@@ -13,8 +13,7 @@ let package = Package(
         .target(name: "SporthAudioKit", dependencies: ["SoundpipeAudioKit", "CSporthAudioKit", "Sporth"]),
         .target(name: "CSporthAudioKit", dependencies: ["SoundpipeAudioKit", "Sporth"]),
         .testTarget(name: "SporthAudioKitTests", dependencies: ["SporthAudioKit"]),
-        .testTarget(name: "CSporthAudioKitTests", dependencies: ["CSporthAudioKit"])
+        .testTarget(name: "CSporthAudioKitTests", dependencies: ["CSporthAudioKit"]),
     ],
     cxxLanguageStandard: .cxx14
 )
-

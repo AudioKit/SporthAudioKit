@@ -9,12 +9,11 @@ let floatRange = -Float.greatestFiniteMagnitude ... Float.greatestFiniteMagnitud
 
 /// Operation-based effect
 public class OperationEffect: Node {
-
     let input: Node
-    
+
     /// Connected nodes
     public var connections: [Node] { [input] }
-    
+
     /// Underlying AVAudioNode
     public var avAudioNode: AVAudioNode
 
@@ -89,8 +88,8 @@ public class OperationEffect: Node {
     ///
     public convenience init(_ input: Node,
                             channelCount: Int,
-                            operations: (StereoOperation, [Operation]) -> [Operation]) {
-
+                            operations: (StereoOperation, [Operation]) -> [Operation])
+    {
         let computedParameters = operations(StereoOperation.input, Operation.parameters)
         let left = computedParameters[0]
 
@@ -109,8 +108,8 @@ public class OperationEffect: Node {
     ///   - operation: Operation to generate, can be mono or stereo
     ///
     public convenience init(_ input: Node,
-                            operation: (StereoOperation, [Operation]) -> ComputedParameter) {
-
+                            operation: (StereoOperation, [Operation]) -> ComputedParameter)
+    {
         let computedParameter = operation(StereoOperation.input, Operation.parameters)
 
         if type(of: computedParameter) == Operation.self {
@@ -144,7 +143,6 @@ public class OperationEffect: Node {
     ///   - sporth: String of valid Sporth code
     ///
     public init(_ input: Node, sporth: String) {
-
         self.input = input
         avAudioNode = instantiate(effect: "cstm")
         setupParameters()

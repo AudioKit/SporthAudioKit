@@ -5,7 +5,6 @@ import SporthAudioKit
 import XCTest
 
 class PinkNoiseOperationTests: XCTestCase {
-
     func testParameterSweep() {
         let engine = AudioEngine()
         let noise = OperationGenerator {
@@ -13,7 +12,8 @@ class PinkNoiseOperationTests: XCTestCase {
                 trigger: Operation.metronome(),
                 start: 0,
                 end: 1,
-                duration: 1.0)
+                duration: 1.0
+            )
             return Operation.pinkNoise(amplitude: line)
         }
         engine.output = noise
@@ -22,5 +22,4 @@ class PinkNoiseOperationTests: XCTestCase {
         audio.append(engine.render(duration: 1.0))
         testMD5(audio)
     }
-
 }

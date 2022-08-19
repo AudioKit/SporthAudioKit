@@ -1,7 +1,6 @@
 // Copyright AudioKit. All Rights Reserved.
 
-extension ComputedParameter {
-
+public extension ComputedParameter {
     /// This is was built using the JC reverb implementation found in FAUST. According
     /// to the source code, the specifications for this implementation were found on
     /// an old SAIL DART backup tape.
@@ -10,10 +9,10 @@ extension ComputedParameter {
     /// three series allpass units, followed by four parallel comb filters, and two
     /// decorrelation delay lines in parallel at the output.
     ///
-    public func reverberateWithChowning() -> Operation {
+    func reverberateWithChowning() -> Operation {
         return Operation(module: "jcrev", inputs: toMono())
     }
-    
+
     /// This filter reiterates input with an echo density determined by
     /// loopDuration. The attenuation rate is independent and is determined by
     /// reverbDuration, the reverberation duration (defined as the time in seconds
@@ -27,11 +26,12 @@ extension ComputedParameter {
     ///                   Determines frequency response curve, loopDuration * sr/2 peaks spaced evenly
     ///                   between 0 and sr/2. (Default: 0.1, Minimum: 0.0, Maximum: 1.0)
     ///
-    public func reverberateWithCombFilter(reverbDuration: OperationParameter = 1.0,
-                                          loopDuration: OperationParameter = 0.1) -> Operation {
+    func reverberateWithCombFilter(reverbDuration: OperationParameter = 1.0,
+                                   loopDuration: OperationParameter = 0.1) -> Operation
+    {
         return Operation(module: "comb", inputs: toMono(), reverbDuration, loopDuration)
     }
-    
+
     /// 8 delay line stereo FDN reverb, with feedback matrix based upon physical
     /// modeling scattering junction of 8 lossless waveguides of equal
     /// characteristic impedance.
@@ -42,12 +42,13 @@ extension ComputedParameter {
     ///               the opcode unstable. (Default: 0.6, Minimum: 0.0, Maximum: 1.0)
     ///   - cutoffFrequency: Low-pass cutoff frequency. (Default: 4000, Minimum: 12.0, Maximum: 20000.0)
     ///
-    public func reverberateWithCostello(feedback: OperationParameter = 0.6,
-                                        cutoffFrequency: OperationParameter = 4_000) -> StereoOperation {
+    func reverberateWithCostello(feedback: OperationParameter = 0.6,
+                                 cutoffFrequency: OperationParameter = 4000) -> StereoOperation
+    {
         return StereoOperation(module: "revsc",
-                               inputs: self.toStereo(), feedback, cutoffFrequency)
+                               inputs: toStereo(), feedback, cutoffFrequency)
     }
-    
+
     /// This filter reiterates the input with an echo density determined by loop
     /// time. The attenuation rate is independent and is determined by the
     /// reverberation time (defined as the time in seconds for a signal to decay to
@@ -60,8 +61,9 @@ extension ComputedParameter {
     ///   - loopDuration: The loop duration of the filter, in seconds. This can also be thought of as the delay time or
     ///                   “echo density” of the reverberation. (Default: 0.1, Minimum: 0, Maximum: 1)
     ///
-    public func reverberateWithFlatFrequencyResponse(reverbDuration: OperationParameter = 0.5,
-                                                     loopDuration: Double = 0.1) -> Operation {
+    func reverberateWithFlatFrequencyResponse(reverbDuration: OperationParameter = 0.5,
+                                              loopDuration: Double = 0.1) -> Operation
+    {
         return Operation(module: "allpass", inputs: toMono(), reverbDuration, loopDuration)
     }
 }

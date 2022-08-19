@@ -13,14 +13,14 @@ public protocol OperationParameter: CustomStringConvertible {
 }
 
 /// Default Implementation methods
-extension OperationParameter {
+public extension OperationParameter {
     /// Most parameters are mono, so the default is just to return the parameter wrapped in a mono operation
-    public func toMono() -> Operation {
+    func toMono() -> Operation {
         return Operation("\(self) ")
     }
 
     /// Most parameters are mono, so the default is to duplicate the parameter in both stereo channels
-    public func toStereo() -> StereoOperation {
+    func toStereo() -> StereoOperation {
         return StereoOperation("\(self) \(self) ")
     }
 }

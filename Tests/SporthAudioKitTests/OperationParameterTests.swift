@@ -1,12 +1,11 @@
 // Copyright AudioKit. All Rights Reserved.
 
 import AudioKit
-import SporthAudioKit
 import SoundpipeAudioKit
+import SporthAudioKit
 import XCTest
 
 class OperationGeneratorParametersTests: XCTestCase {
-
     func testSetParameters() {
         let engine = AudioEngine()
         let gen = OperationGenerator { parameters in

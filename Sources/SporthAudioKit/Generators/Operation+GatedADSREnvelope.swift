@@ -1,7 +1,6 @@
 // Copyright AudioKit. All Rights Reserved.
 
-extension Operation {
-
+public extension Operation {
     /// Gate based linear AHD envelope generator
     ///
     /// - Parameters:
@@ -10,13 +9,13 @@ extension Operation {
     ///   - hold: Hold duration, in seconds. (Default: 0.3)
     ///   - release: Release duration, in seconds. (Default: 0.2)
     ///
-    public func gatedADSREnvelope(
+    func gatedADSREnvelope(
         gate: OperationParameter,
         attack: OperationParameter = 0.1,
         decay: OperationParameter = 0.0,
         sustain: OperationParameter = 1,
         release: OperationParameter = 0.2
-        ) -> Operation {
+    ) -> Operation {
         return Operation(module: "adsr *", inputs: toMono(), gate, attack, decay, sustain, release)
     }
 }

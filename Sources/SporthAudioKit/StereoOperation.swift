@@ -2,7 +2,6 @@
 
 /// Stereo version of ComputedParameter
 open class StereoOperation: ComputedParameter {
-
     // MARK: - Dependency Management
 
     fileprivate var inputs = [OperationParameter]()
@@ -51,10 +50,10 @@ open class StereoOperation: ComputedParameter {
                     }
                 }
             } else {
-                opString  += "\(input) "
+                opString += "\(input) "
             }
         }
-        opString  += "\(module) "
+        opString += "\(module) "
         return opString
     }
 
@@ -118,7 +117,7 @@ open class StereoOperation: ComputedParameter {
     /// - parameter operationString: Valid Sporth string (proceed with caution
     ///
     public init(_ operationString: String) {
-        self.valueText = operationString
+        valueText = operationString
     }
 
     /// Initialize the stereo operation
@@ -129,7 +128,7 @@ open class StereoOperation: ComputedParameter {
     ///
     public init(module: String, setup: String = "", inputs: OperationParameter...) {
         self.module = module
-        self.setupSporth = setup
+        setupSporth = setup
         self.inputs = inputs
 
         for input in inputs {

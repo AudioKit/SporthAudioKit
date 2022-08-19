@@ -3,8 +3,8 @@
 //: ### This is traditionally done with Low-Frequency Oscillators, LFOs.
 //:
 import AudioKit
-import SporthAudioKit
 import PlaygroundSupport
+import SporthAudioKit
 
 let generator = OperationGenerator { _ in
     let frequencyLFO = Operation.square(frequency: 1)
@@ -21,7 +21,8 @@ let generator = OperationGenerator { _ in
         carrierMultiplier: carrierLFO,
         modulatingMultiplier: modulatingMultiplierLFO,
         modulationIndex: modulatingIndexLFO,
-        amplitude: 0.2)
+        amplitude: 0.2
+    )
 }
 
 let engine = AudioEngine()

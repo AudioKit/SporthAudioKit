@@ -1,7 +1,6 @@
 // Copyright AudioKit. All Rights Reserved.
 
-extension Operation {
-    
+public extension Operation {
     /// Keep track of the number of times a trigger has fired
     ///
     /// - Parameters:
@@ -9,18 +8,18 @@ extension Operation {
     ///   - looping: If set to true, when the maximum is reaching, the count goes back to zero,
     ///              otherwise it stays at the maximum
     ///
-    public func count(maximum: OperationParameter = 1_000_000, looping: Bool = true) -> Operation {
+    func count(maximum: OperationParameter = 1_000_000, looping: Bool = true) -> Operation {
         return Operation(module: "count", inputs: toMono(), maximum, looping ? 0 : 1)
     }
-    
+
     /// Division of parameters
     ///
     /// - parameter denominator: The amount to divide
     ///
-    public func dividedBy(_ denominator: OperationParameter) -> Operation {
+    func dividedBy(_ denominator: OperationParameter) -> Operation {
         return Operation(module: "/", inputs: self, denominator)
     }
-    
+
     /// Increment a signal by a default value of 1
     ///
     /// - Parameters:
@@ -29,73 +28,75 @@ extension Operation {
     ///   - minimum: Increment amount (Default: 1)
     ///   - maximum: Increment amount (Default: 1)
     ///
-    public func increment(on trigger: OperationParameter,
-                          by step: OperationParameter = 1.0,
-                          minimum: OperationParameter = 0.0,
-                          maximum: OperationParameter = 1_000_000) -> Operation {
+    func increment(on trigger: OperationParameter,
+                   by step: OperationParameter = 1.0,
+                   minimum: OperationParameter = 0.0,
+                   maximum: OperationParameter = 1_000_000) -> Operation
+    {
         return Operation(module: "incr", inputs: trigger, step, minimum, maximum, toMono())
     }
-    
+
     /// Offsetting by way of addition
     ///
     /// - parameter parameter: The amount to offset by
     ///
-    public func offsetBy(_ parameter: OperationParameter) -> Operation {
-        return self.plus(parameter)
+    func offsetBy(_ parameter: OperationParameter) -> Operation {
+        return plus(parameter)
     }
 
     /// Addition/Summation of operations
     ///
     /// - parameter parameter: The amount to add
     ///
-    public func plus(_ parameter: OperationParameter) -> Operation {
+    func plus(_ parameter: OperationParameter) -> Operation {
         return Operation(module: "+", inputs: self, parameter)
     }
-    
+
     /// This scales from -1 to 1 to a range defined by a minimum and maximum point in the input and output domain.
     ///
     /// - Parameters:
     ///   - minimum: Minimum value to scale to. (Default: 0)
     ///   - maximum: Maximum value to scale to. (Default: 1)
     ///
-    public func scale(minimum: OperationParameter = 0,
-                      maximum: OperationParameter = 1) -> Operation {
+    func scale(minimum: OperationParameter = 0,
+               maximum: OperationParameter = 1) -> Operation
+    {
         return Operation(module: "biscale", inputs: self, minimum, maximum)
     }
-    
+
     /// Offsetting by way of multiplication
     ///
     /// - parameter parameter: The amount to scale by
     ///
-    public func scaledBy(_ parameter: OperationParameter) -> Operation {
-        return self.times(parameter)
+    func scaledBy(_ parameter: OperationParameter) -> Operation {
+        return times(parameter)
     }
-    
+
     /// Subtraction of parameters
     ///
     /// - parameter subtrahend: The amount to subtract
     ///
-    public func minus(_ subtrahend: OperationParameter) -> Operation {
+    func minus(_ subtrahend: OperationParameter) -> Operation {
         return Operation(module: "-", inputs: self, subtrahend)
     }
-    
+
     /// Multiplication of parameters
     ///
     /// - parameter parameter: The amount to multiply
     ///
-    public func times(_ parameter: OperationParameter) -> Operation {
+    func times(_ parameter: OperationParameter) -> Operation {
         return Operation(module: "*", inputs: self, parameter)
     }
 }
 
-extension StereoOperation {
+public extension StereoOperation {
     /// Helper function for addition
     ///
     /// - Parameters:
     ///   - first: 1st parameter
     ///   - second: 2nd parameter
     ///
-    public static func + (first: StereoOperation, second: StereoOperation) -> StereoOperation {
+    static func + (first: StereoOperation, second: StereoOperation) -> StereoOperation {
         return StereoOperation(module: "rot + rot rot +",
                                inputs: first.left(), first.right(), second.left(), second.right())
     }

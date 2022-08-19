@@ -5,7 +5,6 @@ import AudioKit
 import XCTest
 
 class SporthGenerationTests: XCTestCase {
-
     func testAdd() {
         let operation1 = Operation.sineWave()
         let operation2 = Operation.squareWave()

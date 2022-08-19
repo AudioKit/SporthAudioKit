@@ -1,12 +1,11 @@
 // Copyright AudioKit. All Rights Reserved.
 
 import AudioKit
-import SporthAudioKit
 import SoundpipeAudioKit
+import SporthAudioKit
 import XCTest
 
 class VariableDelayOperationTests: XCTestCase {
-
     func testParameterSweep() {
         let engine = AudioEngine()
         let input = Oscillator(waveform: Table(.triangle))
@@ -15,7 +14,8 @@ class VariableDelayOperationTests: XCTestCase {
                 trigger: Operation.metronome(),
                 start: 1,
                 end: 0,
-                duration: 1.0)
+                duration: 1.0
+            )
             return input.variableDelay(time: 0.1 * ramp, feedback: 0.9 * ramp)
         }
         input.start()
@@ -23,5 +23,4 @@ class VariableDelayOperationTests: XCTestCase {
         audio.append(engine.render(duration: 1.0))
         testMD5(audio)
     }
-
 }

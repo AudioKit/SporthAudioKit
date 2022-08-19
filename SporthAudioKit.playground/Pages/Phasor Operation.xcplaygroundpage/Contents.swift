@@ -2,8 +2,8 @@
 //: Using the phasor to sweep amplitude and frequencies
 //:
 import AudioKit
-import SporthAudioKit
 import PlaygroundSupport
+import SporthAudioKit
 
 let interval: Double = 2
 let noteCount: Double = 24

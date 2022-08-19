@@ -28,7 +28,7 @@ public func - (left: OperationParameter, right: OperationParameter) -> Operation
 ///
 public func - (first: StereoOperation, second: StereoOperation) -> StereoOperation {
     return StereoOperation(module: "rot swap - rot rot swap -",
-                             inputs: first.left(), first.right(), second.left(), second.right())
+                           inputs: first.left(), first.right(), second.left(), second.right())
 }
 
 /// Negation
@@ -45,7 +45,6 @@ public prefix func - (x: OperationParameter) -> Operation {
 ///
 public prefix func - (x: StereoOperation) -> StereoOperation {
     return StereoOperation(module: "0 swap - swap 0 swap - swap", inputs: x.left(), x.right())
-
 }
 
 /// Helper function for Multiplication

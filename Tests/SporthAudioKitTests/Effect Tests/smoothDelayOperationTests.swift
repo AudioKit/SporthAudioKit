@@ -1,12 +1,11 @@
 // Copyright AudioKit. All Rights Reserved.
 
 import AudioKit
-import SporthAudioKit
 import SoundpipeAudioKit
+import SporthAudioKit
 import XCTest
 
 class SmoothDelayTests: XCTestCase {
-
     func testDefault() {
         let engine = AudioEngine()
         let input = Oscillator(waveform: Table(.triangle))
@@ -45,7 +44,8 @@ class SmoothDelayTests: XCTestCase {
                 trigger: Operation.metronome(frequency: 1.0),
                 start: 0.0,
                 end: 0.1,
-                duration: 4.0)
+                duration: 4.0
+            )
             return input.smoothDelay(time: 0.01 + ramp, feedback: 0.99 - ramp, samples: 512)
         }
         input.start()
@@ -63,5 +63,4 @@ class SmoothDelayTests: XCTestCase {
         audio.append(engine.render(duration: 4.0))
         testMD5(audio)
     }
-
 }

@@ -2,8 +2,8 @@
 //:
 //: Sometimes as audio developers, we just like to have some fun.
 import AudioKit
-import SporthAudioKit
 import PlaygroundSupport
+import SporthAudioKit
 
 let playRate = 2.0
 
