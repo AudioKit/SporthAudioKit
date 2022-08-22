@@ -47,7 +47,6 @@ SPORTH_UGEN("diode", sporth_diode, SPORTH_DIODE, 3, 1)  \
 SPORTH_UGEN("dist", sporth_dist, SPORTH_DIST, 5, 1)  \
 SPORTH_UGEN("div", sporth_divide, SPORTH_DIVv2, 2, 1)  \
 SPORTH_UGEN("dmetro", sporth_dmetro, SPORTH_DMETRO, 1, 1)  \
-SPORTH_UGEN("drip", sporth_drip, SPORTH_DRIP, 9, 1)  \
 SPORTH_UGEN("drop", sporth_drop, SPORTH_DROP, 1, 0)  \
 SPORTH_UGEN("dtrig", sporth_dtrig, SPORTH_DTRIG, 5, 1)  \
 SPORTH_UGEN("dup", sporth_dup, SPORTH_DUP, 1, 2)  \
