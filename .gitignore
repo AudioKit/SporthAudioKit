@@ -7,3 +7,5 @@ xcuserdata
 DerivedData/
 *.xcodeproj
 *.xcworkspacedata
+
+Package.resolved
