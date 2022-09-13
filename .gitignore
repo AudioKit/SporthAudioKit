@@ -5,7 +5,6 @@ Packages
 .build/
 xcuserdata
 DerivedData/
-*.xcodeproj
 *.xcworkspacedata
 
 Package.resolved

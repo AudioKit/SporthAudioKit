@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F12C63E728CDC25E002A92AF /* Controls in Frameworks */ = {isa = PBXBuildFile; productRef = F12C63E628CDC25E002A92AF /* Controls */; };
+		F12C63E928CDC26B002A92AF /* Controls in Frameworks */ = {isa = PBXBuildFile; productRef = F12C63E828CDC26B002A92AF /* Controls */; };
+		F12C63EB28CDC739002A92AF /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C63EA28CDC739002A92AF /* Global.swift */; };
+		F12C63EC28CDC739002A92AF /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C63EA28CDC739002A92AF /* Global.swift */; };
+		F153455128C818FA00178108 /* SporthAudioKitDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153454128C818FA00178108 /* SporthAudioKitDemoApp.swift */; };
+		F153455228C818FA00178108 /* SporthAudioKitDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153454128C818FA00178108 /* SporthAudioKitDemoApp.swift */; };
+		F153455328C818FA00178108 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153454228C818FA00178108 /* ContentView.swift */; };
+		F153455428C818FA00178108 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153454228C818FA00178108 /* ContentView.swift */; };
+		F153455528C818FA00178108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F153454328C818FA00178108 /* Assets.xcassets */; };
+		F153455628C818FA00178108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F153454328C818FA00178108 /* Assets.xcassets */; };
+		F153456E28C81CA800178108 /* DroneOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456228C81CA800178108 /* DroneOperation.swift */; };
+		F153456F28C81CA800178108 /* DroneOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456228C81CA800178108 /* DroneOperation.swift */; };
+		F153457828C81CA800178108 /* LFOOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456728C81CA800178108 /* LFOOperation.swift */; };
+		F153457928C81CA800178108 /* LFOOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456728C81CA800178108 /* LFOOperation.swift */; };
+		F153457A28C81CA800178108 /* CrossingSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456828C81CA800178108 /* CrossingSignal.swift */; };
+		F153457B28C81CA800178108 /* CrossingSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456828C81CA800178108 /* CrossingSignal.swift */; };
+		F153457C28C81CA800178108 /* VocalTractOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456928C81CA800178108 /* VocalTractOperation.swift */; };
+		F153457D28C81CA800178108 /* VocalTractOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456928C81CA800178108 /* VocalTractOperation.swift */; };
+		F153457E28C81CA800178108 /* PhasorOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456A28C81CA800178108 /* PhasorOperation.swift */; };
+		F153457F28C81CA800178108 /* PhasorOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456A28C81CA800178108 /* PhasorOperation.swift */; };
+		F153458028C81CA800178108 /* InstrumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456B28C81CA800178108 /* InstrumentOperation.swift */; };
+		F153458128C81CA800178108 /* InstrumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456B28C81CA800178108 /* InstrumentOperation.swift */; };
+		F153458228C81CA800178108 /* StereoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456C28C81CA800178108 /* StereoOperation.swift */; };
+		F153458328C81CA800178108 /* StereoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456C28C81CA800178108 /* StereoOperation.swift */; };
+		F153458428C81CA800178108 /* SegmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456D28C81CA800178108 /* SegmentOperation.swift */; };
+		F153458528C81CA800178108 /* SegmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F153456D28C81CA800178108 /* SegmentOperation.swift */; };
+		F153458828C81CE100178108 /* SporthAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = F153458728C81CE100178108 /* SporthAudioKit */; };
+		F153458A28C81CE700178108 /* SporthAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = F153458928C81CE700178108 /* SporthAudioKit */; };
+		F153459628C81FAA00178108 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = F153459528C81FAA00178108 /* AudioKitUI */; };
+		F153459828C81FE200178108 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = F153459728C81FE200178108 /* AudioKitUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F12C63EA28CDC739002A92AF /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = "Reusable Components/Global.swift"; sourceTree = "<group>"; };
+		F153454128C818FA00178108 /* SporthAudioKitDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SporthAudioKitDemoApp.swift; sourceTree = "<group>"; };
+		F153454228C818FA00178108 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F153454328C818FA00178108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F153454828C818FA00178108 /* SporthAudioKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SporthAudioKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F153454E28C818FA00178108 /* SporthAudioKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SporthAudioKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F153455028C818FA00178108 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		F153456028C8192500178108 /* SporthAudioKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SporthAudioKit; path = ..; sourceTree = "<group>"; };
+		F153456228C81CA800178108 /* DroneOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroneOperation.swift; sourceTree = "<group>"; };
+		F153456728C81CA800178108 /* LFOOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFOOperation.swift; sourceTree = "<group>"; };
+		F153456828C81CA800178108 /* CrossingSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossingSignal.swift; sourceTree = "<group>"; };
+		F153456928C81CA800178108 /* VocalTractOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocalTractOperation.swift; sourceTree = "<group>"; };
+		F153456A28C81CA800178108 /* PhasorOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhasorOperation.swift; sourceTree = "<group>"; };
+		F153456B28C81CA800178108 /* InstrumentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentOperation.swift; sourceTree = "<group>"; };
+		F153456C28C81CA800178108 /* StereoOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StereoOperation.swift; sourceTree = "<group>"; };
+		F153456D28C81CA800178108 /* SegmentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentOperation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F153454528C818FA00178108 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F153459628C81FAA00178108 /* AudioKitUI in Frameworks */,
+				F12C63E728CDC25E002A92AF /* Controls in Frameworks */,
+				F153458828C81CE100178108 /* SporthAudioKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F153454B28C818FA00178108 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F153459828C81FE200178108 /* AudioKitUI in Frameworks */,
+				F12C63E928CDC26B002A92AF /* Controls in Frameworks */,
+				F153458A28C81CE700178108 /* SporthAudioKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F153453B28C818F900178108 = {
+			isa = PBXGroup;
+			children = (
+				F153455F28C8192500178108 /* Packages */,
+				F153454028C818FA00178108 /* Shared */,
+				F153454F28C818FA00178108 /* macOS */,
+				F153454928C818FA00178108 /* Products */,
+				F153458628C81CE100178108 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F153454028C818FA00178108 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F153454128C818FA00178108 /* SporthAudioKitDemoApp.swift */,
+				F153454228C818FA00178108 /* ContentView.swift */,
+				F12C63EA28CDC739002A92AF /* Global.swift */,
+				F153456128C81CA800178108 /* Operations */,
+				F153454328C818FA00178108 /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F153454928C818FA00178108 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F153454828C818FA00178108 /* SporthAudioKitDemo.app */,
+				F153454E28C818FA00178108 /* SporthAudioKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F153454F28C818FA00178108 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				F153455028C818FA00178108 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		F153455F28C8192500178108 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				F153456028C8192500178108 /* SporthAudioKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		F153456128C81CA800178108 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				F153456228C81CA800178108 /* DroneOperation.swift */,
+				F153456728C81CA800178108 /* LFOOperation.swift */,
+				F153456828C81CA800178108 /* CrossingSignal.swift */,
+				F153456928C81CA800178108 /* VocalTractOperation.swift */,
+				F153456A28C81CA800178108 /* PhasorOperation.swift */,
+				F153456B28C81CA800178108 /* InstrumentOperation.swift */,
+				F153456C28C81CA800178108 /* StereoOperation.swift */,
+				F153456D28C81CA800178108 /* SegmentOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		F153458628C81CE100178108 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F153454728C818FA00178108 /* SporthAudioKitDemo (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F153455928C818FA00178108 /* Build configuration list for PBXNativeTarget "SporthAudioKitDemo (iOS)" */;
+			buildPhases = (
+				F153454428C818FA00178108 /* Sources */,
+				F153454528C818FA00178108 /* Frameworks */,
+				F153454628C818FA00178108 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SporthAudioKitDemo (iOS)";
+			packageProductDependencies = (
+				F153458728C81CE100178108 /* SporthAudioKit */,
+				F153459528C81FAA00178108 /* AudioKitUI */,
+				F12C63E628CDC25E002A92AF /* Controls */,
+			);
+			productName = "SporthAudioKitDemo (iOS)";
+			productReference = F153454828C818FA00178108 /* SporthAudioKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F153454D28C818FA00178108 /* SporthAudioKitDemo (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F153455C28C818FA00178108 /* Build configuration list for PBXNativeTarget "SporthAudioKitDemo (macOS)" */;
+			buildPhases = (
+				F153454A28C818FA00178108 /* Sources */,
+				F153454B28C818FA00178108 /* Frameworks */,
+				F153454C28C818FA00178108 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SporthAudioKitDemo (macOS)";
+			packageProductDependencies = (
+				F153458928C81CE700178108 /* SporthAudioKit */,
+				F153459728C81FE200178108 /* AudioKitUI */,
+				F12C63E828CDC26B002A92AF /* Controls */,
+			);
+			productName = "SporthAudioKitDemo (macOS)";
+			productReference = F153454E28C818FA00178108 /* SporthAudioKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F153453C28C818F900178108 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					F153454728C818FA00178108 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					F153454D28C818FA00178108 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = F153453F28C818F900178108 /* Build configuration list for PBXProject "SporthAudioKitDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F153453B28C818F900178108;
+			packageReferences = (
+				F153459428C81FAA00178108 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
+				F12C63E528CDC25E002A92AF /* XCRemoteSwiftPackageReference "Controls" */,
+			);
+			productRefGroup = F153454928C818FA00178108 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F153454728C818FA00178108 /* SporthAudioKitDemo (iOS) */,
+				F153454D28C818FA00178108 /* SporthAudioKitDemo (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F153454628C818FA00178108 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F153455528C818FA00178108 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F153454C28C818FA00178108 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F153455628C818FA00178108 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F153454428C818FA00178108 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F153457E28C81CA800178108 /* PhasorOperation.swift in Sources */,
+				F153455328C818FA00178108 /* ContentView.swift in Sources */,
+				F153458228C81CA800178108 /* StereoOperation.swift in Sources */,
+				F12C63EB28CDC739002A92AF /* Global.swift in Sources */,
+				F153458428C81CA800178108 /* SegmentOperation.swift in Sources */,
+				F153458028C81CA800178108 /* InstrumentOperation.swift in Sources */,
+				F153455128C818FA00178108 /* SporthAudioKitDemoApp.swift in Sources */,
+				F153457C28C81CA800178108 /* VocalTractOperation.swift in Sources */,
+				F153456E28C81CA800178108 /* DroneOperation.swift in Sources */,
+				F153457A28C81CA800178108 /* CrossingSignal.swift in Sources */,
+				F153457828C81CA800178108 /* LFOOperation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F153454A28C818FA00178108 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F153457F28C81CA800178108 /* PhasorOperation.swift in Sources */,
+				F153455428C818FA00178108 /* ContentView.swift in Sources */,
+				F153458328C81CA800178108 /* StereoOperation.swift in Sources */,
+				F12C63EC28CDC739002A92AF /* Global.swift in Sources */,
+				F153458528C81CA800178108 /* SegmentOperation.swift in Sources */,
+				F153458128C81CA800178108 /* InstrumentOperation.swift in Sources */,
+				F153455228C818FA00178108 /* SporthAudioKitDemoApp.swift in Sources */,
+				F153457D28C81CA800178108 /* VocalTractOperation.swift in Sources */,
+				F153456F28C81CA800178108 /* DroneOperation.swift in Sources */,
+				F153457B28C81CA800178108 /* CrossingSignal.swift in Sources */,
+				F153457928C81CA800178108 /* LFOOperation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F153455728C818FA00178108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F153455828C818FA00178108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F153455A28C818FA00178108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.audiokit.SporthAudioKitDemo;
+				PRODUCT_NAME = SporthAudioKitDemo;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F153455B28C818FA00178108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.audiokit.SporthAudioKitDemo;
+				PRODUCT_NAME = SporthAudioKitDemo;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F153455D28C818FA00178108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.audiokit.SporthAudioKitDemo;
+				PRODUCT_NAME = SporthAudioKitDemo;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F153455E28C818FA00178108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.audiokit.SporthAudioKitDemo;
+				PRODUCT_NAME = SporthAudioKitDemo;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F153453F28C818F900178108 /* Build configuration list for PBXProject "SporthAudioKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F153455728C818FA00178108 /* Debug */,
+				F153455828C818FA00178108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F153455928C818FA00178108 /* Build configuration list for PBXNativeTarget "SporthAudioKitDemo (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F153455A28C818FA00178108 /* Debug */,
+				F153455B28C818FA00178108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F153455C28C818FA00178108 /* Build configuration list for PBXNativeTarget "SporthAudioKitDemo (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F153455D28C818FA00178108 /* Debug */,
+				F153455E28C818FA00178108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F12C63E528CDC25E002A92AF /* XCRemoteSwiftPackageReference "Controls" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Controls.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		F153459428C81FAA00178108 /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F12C63E628CDC25E002A92AF /* Controls */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F12C63E528CDC25E002A92AF /* XCRemoteSwiftPackageReference "Controls" */;
+			productName = Controls;
+		};
+		F12C63E828CDC26B002A92AF /* Controls */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F12C63E528CDC25E002A92AF /* XCRemoteSwiftPackageReference "Controls" */;
+			productName = Controls;
+		};
+		F153458728C81CE100178108 /* SporthAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SporthAudioKit;
+		};
+		F153458928C81CE700178108 /* SporthAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SporthAudioKit;
+		};
+		F153459528C81FAA00178108 /* AudioKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F153459428C81FAA00178108 /* XCRemoteSwiftPackageReference "AudioKitUI" */;
+			productName = AudioKitUI;
+		};
+		F153459728C81FE200178108 /* AudioKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F153459428C81FAA00178108 /* XCRemoteSwiftPackageReference "AudioKitUI" */;
+			productName = AudioKitUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F153453C28C818F900178108 /* Project object */;
+}
